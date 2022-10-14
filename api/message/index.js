@@ -1,6 +1,6 @@
-import fetch from 'node-fetch'
+const fetch = require('node-fetch')
 
-export const httpTrigger =  async(context, req) => {
+module.exports = async(context, req) => {
   try{
     context.log(req)
     let r = await fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -9,5 +9,5 @@ export const httpTrigger =  async(context, req) => {
   } catch (e) {
     context.log(e)
   }
-  context.done = () => {}
+  //context.done = () => {}
 }
