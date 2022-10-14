@@ -2,10 +2,12 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "node-fetch": "^3.2.10"
+  }
 }
