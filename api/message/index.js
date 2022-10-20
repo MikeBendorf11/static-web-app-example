@@ -1,13 +1,14 @@
-const fetch = require('node-fetch')
+import fetch from 'node-fetch';
 
-module.exports = async(context, req) => {
+export default async(context, req) => {
   try{
-    context.log(req)
+    //context.log(req)
     let r = await fetch('https://jsonplaceholder.typicode.com/todos/1')
     let response = await r.json()
     context.res.json(response)
   } catch (e) {
-    context.log(e)
+    //context.log(e)
+    context.res.status(500).send(e)
   }
   //context.done = () => {}
 }
